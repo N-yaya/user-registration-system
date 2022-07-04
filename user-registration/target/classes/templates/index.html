@@ -1,0 +1,33 @@
+
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Management system </title>
+</head>
+<body>
+<div align="center">
+    <h1> User List </h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>User Name</th>
+            <th>User password</th>
+            <th> User Email</th>
+            <th>User place of birth</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="userRegis:${users}">
+            <td th:text="${userRegis.name}"></td>
+            <td th:text="${userRegis.password}"></td>
+            <td th:text="${userRegis.email}"></td>
+            <td th:text="${userRegis.placeOB}"></td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+</body>
+</html>
